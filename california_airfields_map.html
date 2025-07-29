@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a7727471aace8f60d1a66c333a0f71f5 {
+                #map_46e81cdfcac23998dbab687e6be29d88 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,52 +50,20 @@
             </script>
 
         
-    
-                    <style>
-                        .foliumtooltip {
-                            
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
-    
-                    <style>
-                        .foliumpopup {
-                            margin: auto;
-                        }
-                       .foliumpopup table{
-                            margin: auto;
-                        }
-                        .foliumpopup tr{
-                            text-align: left;
-                        }
-                        .foliumpopup th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_a7727471aace8f60d1a66c333a0f71f5" ></div>
+            <div class="folium-map" id="map_46e81cdfcac23998dbab687e6be29d88" ></div>
         
 </body>
 <script>
     
     
-            var map_a7727471aace8f60d1a66c333a0f71f5 = L.map(
-                "map_a7727471aace8f60d1a66c333a0f71f5",
+            var map_46e81cdfcac23998dbab687e6be29d88 = L.map(
+                "map_46e81cdfcac23998dbab687e6be29d88",
                 {
-                    center: [36.5, -119.5],
+                    center: [36.7783, -119.4179],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 6,
@@ -110,7 +78,7 @@
 
         
     
-            var tile_layer_bc55fd60befb2686a8024db710b16f3f = L.tileLayer(
+            var tile_layer_b54a557f05f616497289f82ef965e6da = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -127,133 +95,192 @@
             );
         
     
-            tile_layer_bc55fd60befb2686a8024db710b16f3f.addTo(map_a7727471aace8f60d1a66c333a0f71f5);
+            tile_layer_b54a557f05f616497289f82ef965e6da.addTo(map_46e81cdfcac23998dbab687e6be29d88);
         
     
-        function geo_json_cdca3a14c0ed93e2f665a736ec7262f8_styler(feature) {
-            switch(feature.properties.ICAO) {
-                default:
-                    return {"color": "#0073e6", "fillOpacity": 0.6, "weight": 2};
-            }
-        }
-
-        function geo_json_cdca3a14c0ed93e2f665a736ec7262f8_onEachFeature(feature, layer) {
-
-            layer.on({
-            });
-        };
-        var geo_json_cdca3a14c0ed93e2f665a736ec7262f8 = L.geoJson(null, {
-                onEachFeature: geo_json_cdca3a14c0ed93e2f665a736ec7262f8_onEachFeature,
-            
-                style: geo_json_cdca3a14c0ed93e2f665a736ec7262f8_styler,
-            ...{
+            var feature_group_4e09db045b744a5bc49e6564c4f127d2 = L.featureGroup(
+                {
 }
-        });
+            );
+        
+    
+            var marker_8a2be752689fc1bf90b6af61b708ee0d = L.marker(
+                [33.9416, -118.4085],
+                {
+}
+            ).addTo(feature_group_4e09db045b744a5bc49e6564c4f127d2);
+        
+    
+            var icon_02f03ef83e978a74054d7f7c5c6a0806 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d12648ee38736dd0ccf31bd2891c1640 = L.popup({
+  "maxWidth": 250,
+});
 
-        function geo_json_cdca3a14c0ed93e2f665a736ec7262f8_add (data) {
-            geo_json_cdca3a14c0ed93e2f665a736ec7262f8
-                .addData(data);
-        }
-            geo_json_cdca3a14c0ed93e2f665a736ec7262f8_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [-118.4081, 33.9425], "type": "Point"}, "properties": {"Airport_Name": "Los Angeles Intl", "Design_Criteria": "PANS-OPS", "ICAO": "KLAX", "Latitude": 33.9425, "Longitude": -118.4081, "Procedure_Title": "RNAV (GPS) RWY 25L"}, "type": "Feature"}, {"geometry": {"coordinates": [-122.379, 37.6213], "type": "Point"}, "properties": {"Airport_Name": "San Francisco Intl", "Design_Criteria": "TERPS", "ICAO": "KSFO", "Latitude": 37.6213, "Longitude": -122.379, "Procedure_Title": "ILS or LOC RWY 28L"}, "type": "Feature"}, {"geometry": {"coordinates": [-117.1933, 32.7338], "type": "Point"}, "properties": {"Airport_Name": "San Diego Intl", "Design_Criteria": "PANS-OPS", "ICAO": "KSAN", "Latitude": 32.7338, "Longitude": -117.1933, "Procedure_Title": "RNAV (RNP) RWY 09"}, "type": "Feature"}], "name": "california_airfields", "type": "FeatureCollection"});
+        
+            
+                var html_fc4e602edf89c47311ae80ce1fd6eb05 = $(`<div id="html_fc4e602edf89c47311ae80ce1fd6eb05" style="width: 100.0%; height: 100.0%;">         <b>KLAX – Los Angeles International</b><br>         ICAO Procedure: ILS RWY 25L<br>         Frequency: 110.3 MHz<br>         Approach Lights: ALSF-II     </div>`)[0];
+                popup_d12648ee38736dd0ccf31bd2891c1640.setContent(html_fc4e602edf89c47311ae80ce1fd6eb05);
+            
+        
+
+        marker_8a2be752689fc1bf90b6af61b708ee0d.bindPopup(popup_d12648ee38736dd0ccf31bd2891c1640)
+        ;
 
         
     
-    geo_json_cdca3a14c0ed93e2f665a736ec7262f8.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
     
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["Airport_Name", "ICAO"];
-    let aliases = ["Airport:", "ICAO Code:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i]}</th>
+                marker_8a2be752689fc1bf90b6af61b708ee0d.setIcon(icon_02f03ef83e978a74054d7f7c5c6a0806);
             
-            <td>${handleObject(layer.feature.properties[v])}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
     
-    return div
-    }
-    ,{
+            var marker_206a83af373cbacfbc45673270dd2b3a = L.marker(
+                [37.6213, -122.379],
+                {
+}
+            ).addTo(feature_group_4e09db045b744a5bc49e6564c4f127d2);
+        
+    
+            var icon_68988bc4b04b7a818d6d75853d0ae879 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d0d38b3786845f768fbd2adf555c10c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e0f6d4065948e55a4415c4b6fa5e498b = $(`<div id="html_e0f6d4065948e55a4415c4b6fa5e498b" style="width: 100.0%; height: 100.0%;">         <b>KSFO – San Francisco International</b><br>         ICAO Procedure: RNAV (GPS) RWY 28L<br>         Frequency: 109.5 MHz<br>         Approach Lights: MALSR     </div>`)[0];
+                popup_9d0d38b3786845f768fbd2adf555c10c.setContent(html_e0f6d4065948e55a4415c4b6fa5e498b);
+            
+        
+
+        marker_206a83af373cbacfbc45673270dd2b3a.bindPopup(popup_9d0d38b3786845f768fbd2adf555c10c)
+        ;
+
+        
+    
+    
+                marker_206a83af373cbacfbc45673270dd2b3a.setIcon(icon_68988bc4b04b7a818d6d75853d0ae879);
+            
+    
+            var marker_b6b43394274488253793485a29f54d28 = L.marker(
+                [32.7338, -117.1933],
+                {
+}
+            ).addTo(feature_group_4e09db045b744a5bc49e6564c4f127d2);
+        
+    
+            var icon_6e49fa9c8a51bfdd26f1c1688e2e1aea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4c7ff9775857602edc8a15cd28ebd73 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fc6a279b0bde0c9207d02fccd3e1d8eb = $(`<div id="html_fc6a279b0bde0c9207d02fccd3e1d8eb" style="width: 100.0%; height: 100.0%;">         <b>KSAN – San Diego International</b><br>         ICAO Procedure: LOC RWY 09<br>         Frequency: 111.1 MHz<br>         Approach Lights: SSALR     </div>`)[0];
+                popup_a4c7ff9775857602edc8a15cd28ebd73.setContent(html_fc6a279b0bde0c9207d02fccd3e1d8eb);
+            
+        
+
+        marker_b6b43394274488253793485a29f54d28.bindPopup(popup_a4c7ff9775857602edc8a15cd28ebd73)
+        ;
+
+        
+    
+    
+                marker_b6b43394274488253793485a29f54d28.setIcon(icon_6e49fa9c8a51bfdd26f1c1688e2e1aea);
+            
+    
+            feature_group_4e09db045b744a5bc49e6564c4f127d2.addTo(map_46e81cdfcac23998dbab687e6be29d88);
+        
+    
+            var feature_group_d415a3729300491c56fe82ee5aed48f3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_06b16ff4d0616bed9862ee399c74af10 = L.polyline(
+                [[33.9416, -118.4085], [33.951, -118.42], [33.962, -118.432]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d415a3729300491c56fe82ee5aed48f3);
+        
+    
+            poly_line_06b16ff4d0616bed9862ee399c74af10.bindTooltip(
+                `<div>
+                     KLAX – Missed Approach Segment
+                 </div>`,
+                {
   "sticky": true,
-  "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_cdca3a14c0ed93e2f665a736ec7262f8.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["Procedure_Title", "Design_Criteria"];
-    let aliases = ["Procedure:", "Design Criteria:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "className": "foliumpopup",
-});
-                     
-    
-            geo_json_cdca3a14c0ed93e2f665a736ec7262f8.addTo(map_a7727471aace8f60d1a66c333a0f71f5);
+}
+            );
         
     
-            var layer_control_082ae9cb45fd083ed214235c745319c3_layers = {
+            var circle_9d8f564acdd27b0406ed71a5890d251d = L.circle(
+                [37.6213, -122.379],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d415a3729300491c56fe82ee5aed48f3);
+        
+    
+            circle_9d8f564acdd27b0406ed71a5890d251d.bindTooltip(
+                `<div>
+                     KSFO – Holding Pattern
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d415a3729300491c56fe82ee5aed48f3.addTo(map_46e81cdfcac23998dbab687e6be29d88);
+        
+    
+            var layer_control_67f65ef6d357c623f48c6ec19b2bc145_layers = {
                 base_layers : {
-                    "cartodbpositron" : tile_layer_bc55fd60befb2686a8024db710b16f3f,
+                    "cartodbpositron" : tile_layer_b54a557f05f616497289f82ef965e6da,
                 },
                 overlays :  {
-                    "California Airfields" : geo_json_cdca3a14c0ed93e2f665a736ec7262f8,
+                    "Airfields" : feature_group_4e09db045b744a5bc49e6564c4f127d2,
+                    "ICAO Procedures" : feature_group_d415a3729300491c56fe82ee5aed48f3,
                 },
             };
-            let layer_control_082ae9cb45fd083ed214235c745319c3 = L.control.layers(
-                layer_control_082ae9cb45fd083ed214235c745319c3_layers.base_layers,
-                layer_control_082ae9cb45fd083ed214235c745319c3_layers.overlays,
+            let layer_control_67f65ef6d357c623f48c6ec19b2bc145 = L.control.layers(
+                layer_control_67f65ef6d357c623f48c6ec19b2bc145_layers.base_layers,
+                layer_control_67f65ef6d357c623f48c6ec19b2bc145_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_a7727471aace8f60d1a66c333a0f71f5);
+            ).addTo(map_46e81cdfcac23998dbab687e6be29d88);
 
-        
-    
-            tile_layer_bc55fd60befb2686a8024db710b16f3f.addTo(map_a7727471aace8f60d1a66c333a0f71f5);
-        
-    
-            geo_json_cdca3a14c0ed93e2f665a736ec7262f8.addTo(map_a7727471aace8f60d1a66c333a0f71f5);
         
 </script>
 </html>
