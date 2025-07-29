@@ -20,3 +20,7 @@ The methods applied here support further integration of navigational systems, ho
 - Add procedural geometry (missed approach tracks, holding patterns)  
 - Integrate regulatory metadata (PBN notes, communication frequencies)  
 - Automate extraction from Host graphics and Supplement PDFs
+
+In support of data-driven aviation strategy, I authored this interactive Folium-based map to visualize ICAO procedural elements across California’s principal airports.
+
+https://e-klein-uscprojects.github.io/airfield-gis-california/california_airfields_map.html
