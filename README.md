@@ -24,3 +24,4 @@ The methods applied here support further integration of navigational systems, ho
 In support of data-driven aviation strategy, I authored this interactive Folium-based map to visualize ICAO procedural elements across California’s principal airports.
 
 https://e-klein-uscprojects.github.io/airfield-gis-california/california_airfields_map.html
+
